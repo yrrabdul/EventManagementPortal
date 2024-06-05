@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="704.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eventmanagement.controllers.eventsController">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="1270.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+      <TextField fx:id="eventNameTF" layoutX="35.0" layoutY="128.0" promptText="Event Name" />
+      <TextField fx:id="venueNameTF" layoutX="35.0" layoutY="165.0" promptText="Venue Name" />
+      <TextField fx:id="venueAddressTF" layoutX="35.0" layoutY="205.0" promptText="Venue Address" />
+      <TextField fx:id="eventExpenseTF" layoutX="35.0" layoutY="300.0" promptText="Event Expense" />
+      <TextField fx:id="eventPriceTF" layoutX="279.0" layoutY="128.0" promptText="Event Price" />
+      <TextField fx:id="customerIDTF" layoutX="279.0" layoutY="165.0" promptText="Customer ID" />
+      <DatePicker fx:id="eventDateField" layoutX="279.0" layoutY="205.0" prefHeight="25.0" prefWidth="149.0" promptText="Event Date" />
+      <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="115.0" onAction="#onSearchBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #fa8231;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="200.0" onAction="#onUpdateBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #0fb9b1;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="290.0" onAction="#onDeleteBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #485460;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="496.0" layoutY="206.0" onAction="#onAddBtnClick" prefHeight="45.0" prefWidth="171.0" style="-fx-background-color: #4b7bec;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </JFXButton>
+      <Label layoutX="35.0" layoutY="85.0" prefHeight="17.0" prefWidth="149.0" text="Event Details">
+         <font>
+            <Font name="System Bold" size="18.0" />
+         </font>
+      </Label>
+      <TableView fx:id="eventTableView" layoutX="14.0" layoutY="362.0" onMouseClicked="#mouseClickedTableView" prefHeight="262.0" prefWidth="1092.0" stylesheets="@../../myCSS/fullpackstyling.css">
+         <columns>
+            <TableColumn fx:id="eventNameColumn" prefWidth="131.0" text="Event Name" />
+            <TableColumn fx:id="eventTypeColumn" prefWidth="135.0" text="Event Type" />
+            <TableColumn fx:id="venueColumn" prefWidth="125.0" text="Venue" />
+            <TableColumn fx:id="dateColumn" prefWidth="105.0" text="Date" />
+            <TableColumn fx:id="startTimeColumn" prefWidth="125.0" text="Start Time" />
+            <TableColumn fx:id="endTimeColumn" prefWidth="125.0" text="End Time" />
+            <TableColumn fx:id="eventExpenseColumn" prefWidth="116.0" text="Event Expense" />
+            <TableColumn fx:id="eventPriceColumn" prefWidth="113.0" text="Event Price" />
+            <TableColumn fx:id="customerIdColumn" prefWidth="116.0" text="Customer ID" />
+         </columns>
+      </TableView>
+      <TextField fx:id="startTimeTF" layoutX="279.0" layoutY="253.0" promptText="Start Time" />
+      <TextField fx:id="endTimeTF" layoutX="279.0" layoutY="300.0" promptText="End Time" />
+      <ComboBox fx:id="eventTypeComboBox" layoutX="35.0" layoutY="253.0" prefWidth="150.0" promptText="Event Type" />
+   </children>
+</AnchorPane>

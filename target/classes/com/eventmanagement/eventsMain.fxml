@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXTimePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="704.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1">
+   <children>
+      <Pane prefHeight="70.0" prefWidth="1270.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+      <JFXTextField labelFloat="true" layoutX="37.0" layoutY="117.0" promptText="Event Name" />
+      <JFXTextField labelFloat="true" layoutX="37.0" layoutY="173.0" promptText="Venue Name" />
+      <JFXButton buttonType="RAISED" layoutX="880.0" layoutY="114.0" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #fa8231;" text="Search" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="19.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="880.0" layoutY="193.0" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #0fb9b1;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXButton buttonType="RAISED" layoutX="880.0" layoutY="282.0" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #485460;" text="Delete" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="23.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField labelFloat="true" layoutX="37.0" layoutY="237.0" promptText="Venue Address" />
+      <JFXTimePicker layoutX="297.0" layoutY="129.0" promptText="Start Time" />
+      <JFXTimePicker layoutX="297.0" layoutY="241.0" promptText="End Time" />
+      <JFXTextField labelFloat="true" layoutX="37.0" layoutY="352.0" promptText="Event Expense" />
+      <JFXTextField layoutX="297.0" layoutY="298.0" promptText="Event Price " />
+      <JFXButton buttonType="RAISED" layoutX="468.0" layoutY="342.0" prefHeight="45.0" prefWidth="171.0" style="-fx-background-color: #4b7bec;" text="ADD" textFill="WHITE">
+         <font>
+            <Font name="System Bold" size="21.0" />
+         </font>
+      </JFXButton>
+      <JFXTextField layoutX="297.0" layoutY="352.0" promptText="Customer ID" />
+      <TableView layoutX="14.0" layoutY="443.0" prefHeight="200.0" prefWidth="1096.0" stylesheets="@../../myCSS/fullpackstyling.css">
+        <columns>
+          <TableColumn prefWidth="131.0" text="Event Name" />
+          <TableColumn prefWidth="135.0" text="Event Type" />
+            <TableColumn prefWidth="125.0" text="Venue" />
+            <TableColumn prefWidth="125.0" text="Date" />
+            <TableColumn prefWidth="125.0" text="Start Time" />
+            <TableColumn prefWidth="125.0" text="End Time" />
+            <TableColumn prefWidth="125.0" text="Event Expense" />
+            <TableColumn prefWidth="125.0" text="Event Price" />
+            <TableColumn prefWidth="125.0" text="Customer ID" />
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>

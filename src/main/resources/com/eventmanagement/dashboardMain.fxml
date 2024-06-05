@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.AreaChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="704.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eventmanagement.controllers.dashboardMainController">
+    <children>
+        <Pane fx:id="DashPane" layoutX="10.0" layoutY="83.0" prefHeight="269.0" prefWidth="1133.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;">
+            <effect>
+                <DropShadow>
+                    <color>
+                        <Color red="0.6666666865348816" blue="1.0" />
+                    </color></DropShadow>
+            </effect>
+            <children>
+                <Pane layoutX="41.0" layoutY="30.0" prefHeight="210.0" prefWidth="220.0" style="-fx-background-color: #ffffff;">
+                    <children>
+                        <Pane prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #ffa502;">
+                            <children>
+                                <Label layoutX="62.0" text="Total Sales">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    <ImageView fitHeight="81.0" fitWidth="82.0" layoutX="70.0" layoutY="36.0" pickOnBounds="true" preserveRatio="true">
+                        <image>
+                            <Image url="@../../images/sales.png" />
+                        </image>
+                    </ImageView>
+                    <Label fx:id="totalSalesLabel" layoutX="100.0" layoutY="146.0" prefHeight="40.0" prefWidth="81.0" text="0">
+                        <font>
+                            <Font name="Arial Black" size="27.0" />
+                        </font>
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                    </Label>
+                    <Label layoutX="20.0" layoutY="146.0" prefHeight="40.0" prefWidth="50.0" text="RS.">
+                        <font>
+                            <Font name="Arial Black" size="27.0" />
+                        </font>
+                        <opaqueInsets>
+                            <Insets />
+                        </opaqueInsets>
+                    </Label>
+                    </children>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="1.0" green="0.7666666507720947" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Pane>
+                <Pane layoutX="310.0" layoutY="30.0" prefHeight="210.0" prefWidth="220.0" style="-fx-background-color: #ffffff;">
+                    <children>
+
+                        <Pane prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #747d8c;">
+                            <children>
+                                <Label layoutX="56.0" text="Total Events" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                        <ImageView fitHeight="73.0" fitWidth="72.0" layoutX="74.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/visit.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="totalEventsLabel" layoutX="98.0" layoutY="136.0" prefHeight="60.0" prefWidth="96.0" text="0">
+                            <font>
+                                <Font name="Arial Black" size="27.0" />
+                            </font>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </Label>
+                    </children>
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.43529412150382996" green="0.46666666865348816" blue="0.5215686559677124" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                </Pane>
+                <Pane layoutX="584.0" layoutY="30.0" prefHeight="210.0" prefWidth="220.0" style="-fx-background-color: #ffffff;">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color green="0.6274510025978088" blue="0.9529411792755127" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <children>
+                        <Pane prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #00a8ff;">
+                            <children>
+                                <Label layoutX="28.0" text="Total Customers" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+
+                        <ImageView fitHeight="72.0" fitWidth="81.0" layoutX="74.0" layoutY="33.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/newcust.png" />
+                            </image>
+                        </ImageView>
+                        <Label fx:id="totalCustomersLabel" layoutX="98.0" layoutY="136.0" prefHeight="60.0" prefWidth="96.0" text="0">
+                            <font>
+                                <Font name="Arial Black" size="27.0" />
+                            </font>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </Label>
+                    </children>
+                </Pane>
+                <Pane layoutX="858.0" layoutY="30.0" prefHeight="210.0" prefWidth="220.0" style="-fx-background-color: #ffffff;">
+                    <effect>
+                        <DropShadow>
+                            <color>
+                                <Color red="0.9529411792755127" green="0.2666666805744171" blue="0.32549020648002625" />
+                            </color>
+                        </DropShadow>
+                    </effect>
+                    <children>
+                        <ImageView fitHeight="81.0" fitWidth="81.0" layoutX="71.0" layoutY="37.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../images/sold.png" />
+                            </image>
+                        </ImageView>
+
+                        <Label fx:id="upcomingEventsLabel" layoutX="104.0" layoutY="136.0" prefHeight="60.0" prefWidth="96.0" text="0">
+                            <font>
+                                <Font name="Arial Black" size="27.0" />
+                            </font>
+                            <opaqueInsets>
+                                <Insets />
+                            </opaqueInsets>
+                        </Label>
+                        <Pane prefHeight="28.0" prefWidth="220.0" style="-fx-background-color: #ff4757;">
+                            <children>
+                                <Label layoutX="32.0" text="Upcoming Events" textAlignment="CENTER">
+                                    <font>
+                                        <Font name="System Bold" size="19.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </Pane>
+                    </children>
+                </Pane>
+            </children></Pane>
+        <Pane fx:id="DashPane1" layoutX="14.0" layoutY="411.0" prefHeight="269.0" prefWidth="1133.0" style="-fx-background-color: #ffffff; -fx-background-radius: 30;">
+            <effect>
+                <DropShadow>
+               <color>
+                  <Color red="0.6666666865348816" blue="1.0" />
+               </color></DropShadow>
+            </effect>
+            <children>
+                <AreaChart fx:id="areaChart" layoutX="45.0" layoutY="15.0" prefHeight="239.0" prefWidth="511.0" title="WEEKLY SALES PROGRESS">
+                    <xAxis>
+                        <CategoryAxis label="DAYS" prefHeight="0.0" prefWidth="523.0" side="BOTTOM" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis label="SOLD ITEMS" side="LEFT" />
+                    </yAxis>
+                </AreaChart>
+                <PieChart fx:id="PieChart" layoutX="707.0" layoutY="22.0" legendSide="TOP" prefHeight="228.0" prefWidth="390.0" title="MONTHLY SALES" />
+            </children>
+        </Pane>
+        <Pane prefHeight="70.0" prefWidth="1270.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+        <Pane layoutY="360.0" prefHeight="40.0" prefWidth="1270.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+    </children>
+</AnchorPane>

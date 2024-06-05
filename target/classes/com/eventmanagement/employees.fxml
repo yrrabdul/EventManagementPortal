@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="704.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eventmanagement.controllers.employeesController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="1270.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+        <TextField fx:id="employeeNameTF" layoutX="35.0" layoutY="128.0" prefHeight="27.0" prefWidth="149.0" promptText="Name" />
+        <TextField fx:id="addressTF" layoutX="35.0" layoutY="172.0" prefHeight="27.0" prefWidth="149.0" promptText="Address" />
+        <TextField fx:id="hourlyWageTF" layoutX="35.0" layoutY="216.0" prefHeight="27.0" prefWidth="149.0" promptText="Hourly Wage" />
+        <TextField fx:id="phoneNumberTF" layoutX="278.0" layoutY="128.0" prefHeight="27.0" prefWidth="149.0" promptText="Phone Number" />
+        <DatePicker fx:id="dateOfBirthDF" layoutX="278.0" layoutY="172.0" prefHeight="27.0" prefWidth="149.0" promptText="Date Of Birth" />
+        <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="115.0" onAction="#onSearchBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #fa8231;" text="Search" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="200.0" onAction="#onUpdateBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #0fb9b1;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="290.0" onAction="#onDeleteBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #485460;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="503.0" layoutY="168.0" onAction="#onAddBtnClick" prefHeight="45.0" prefWidth="171.0" style="-fx-background-color: #4b7bec;" text="ADD" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <Label layoutX="35.0" layoutY="85.0" prefHeight="17.0" prefWidth="149.0" text="Employee Details">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="employeeTableView" layoutX="14.0" layoutY="362.0" onMouseClicked="#mouseClickedTableView" prefHeight="262.0" prefWidth="1069.0" style="-fx-border-radius: 30;" stylesheets="@../../myCSS/fullpackstyling.css">
+            <columns>
+            <TableColumn fx:id="employeeIdColumn" prefWidth="82.0" text="Employee ID" />
+            <TableColumn fx:id="employeeIDColumn" maxWidth="11.0" minWidth="-1.0" prefWidth="0.0" text="Employee ID" />
+                <TableColumn fx:id="employeeNameColumn" prefWidth="163.0" text="Employee Name" />
+                <TableColumn fx:id="phoneNumberColumn" prefWidth="156.0" text="Phone Number" />
+                <TableColumn fx:id="addressColumn" prefWidth="324.0" text="Address" />
+                <TableColumn fx:id="dateOfBirthColumn" prefWidth="129.0" text="Date of Birth" />
+                <TableColumn fx:id="hourlyWageColumn" prefWidth="99.0" text="Hourly Wage" />
+                <TableColumn fx:id="employeeTypeColumn" prefWidth="115.0" text="Employee Type" />
+            </columns>
+        </TableView>
+        <ComboBox fx:id="employeeTypeCB" layoutX="278.0" layoutY="215.0" prefHeight="27.0" prefWidth="150.0" promptText="Employee Type" />
+    </children>
+</AnchorPane>

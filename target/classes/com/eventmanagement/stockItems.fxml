@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="704.0" prefWidth="1270.0" xmlns="http://javafx.com/javafx/15.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.eventmanagement.controllers.stockItemsController">
+    <children>
+        <Pane prefHeight="70.0" prefWidth="1270.0" style="-fx-background-color: linear-gradient(to right top, #6c5ce7, #8554ed, #9f48f1, #b935f2, #d300f0);" />
+        <TextField fx:id="itemNameTF" layoutX="35.0" layoutY="141.0" prefHeight="33.0" prefWidth="149.0" promptText="Item Name" />
+        <TextField fx:id="itemQuantityTF" layoutX="279.0" layoutY="141.0" prefHeight="33.0" prefWidth="149.0" promptText="Item Quantity" />
+        <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="115.0" onAction="#onSearchBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #fa8231;" text="Search" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="200.0" onAction="#onUpdateBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #0fb9b1;" text="Update" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="890.0" layoutY="290.0" onAction="#onDeleteBtnClick" prefHeight="57.0" prefWidth="193.0" style="-fx-background-color: #485460;" text="Delete" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="21.0" />
+            </font>
+        </JFXButton>
+        <JFXButton buttonType="RAISED" layoutX="474.0" layoutY="161.0" onAction="#onAddBtnClick" prefHeight="45.0" prefWidth="149.0" style="-fx-background-color: #4b7bec;" text="ADD" textFill="WHITE">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </JFXButton>
+        <Label layoutX="35.0" layoutY="85.0" prefHeight="17.0" prefWidth="149.0" text="Item Details">
+            <font>
+                <Font name="System Bold" size="18.0" />
+            </font>
+        </Label>
+        <TableView fx:id="itemTableView" layoutX="35.0" layoutY="374.0" onMouseClicked="#mouseClickedTableView" prefHeight="262.0" prefWidth="955.0" stylesheets="@../../myCSS/fullpackstyling.css">
+            <columns>
+                <TableColumn fx:id="itemIdColumn" prefWidth="87.0" text="Item ID" />
+                <TableColumn fx:id="itemNameColumn" prefWidth="177.0" text="Item Name" />
+                <TableColumn fx:id="itemDetailColumn" prefWidth="460.0" text="Item Details" />
+                <TableColumn fx:id="itemQuantityColumn" prefWidth="117.0" text="Item Quantity" />
+            <TableColumn fx:id="unitPriceColumn" prefWidth="110.0" text="Unit Price" />
+            </columns>
+        </TableView>
+        <TextField fx:id="itemDetailTF" layoutX="35.0" layoutY="194.0" prefHeight="33.0" prefWidth="149.0" promptText="Item Detail" />
+      <TextField fx:id="unitPriceTF" layoutX="279.0" layoutY="194.0" prefHeight="33.0" prefWidth="149.0" promptText="Unit Price" />
+    </children>
+</AnchorPane>
